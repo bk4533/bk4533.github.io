@@ -1,61 +1,66 @@
----
-layout: default
-title: Home
----
-
-{% if page.url == "/" %}
-
-<!-- Featured
-================================================== -->
-<section class="featured-posts">
-    <div class="section-title">
-        <h2><span>Featured</span></h2>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container ">
+            <div class="row justify-content-between">
+                <div class="logo">
+                    <a href="#">Bang</a>
+                </div>
+                <nav>
+                    <ul class="gnb">
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">BANG</a></li>
+                        <li><a href="">PROJECTS</a></li>
+                        <li><a href="">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>  
+        </div>
+    </header>
+    <main>
+            <img src="images/2e2a49_dab22828241c4de2a455f384ef32400a_mv2_d_4485_2990_s_4_2.webp" alt="1">
+    </main>
+    <div class="content">
+        <div class="row">
+            <div class="col-6 left">
+                <img src="images/KakaoTalk_20230328_152815010.jpg" alt="me" class="imgme">
+                <h1 class="text-center section ani_rubberBand aniUtil_onMouse aniUtil_active ">Bang</h1>
+                <p class="text-center">full stack programmer</p>
+                <div class="sns d-flex">
+                   <i class="ri-instagram-line"></i>
+                   <i class="ri-twitter-line"></i>
+                   <i class="ri-facebook-circle-line"></i>
+                   <i class="ri-kakao-talk-line"></i>
+                </div>
+                <ul class="download d-flex">
+                    <li><a href="#">down my portfolio</a></li>
+                    <li><a href="#">down my curriculum vitae</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-12 skill section">
+                <h1>My Skill</h1>
+                <div id="skill1" class="skills" data-width="80" data-background="#ffc107">html,css (80%)</div>
+                <div id="skill2" class="skills" data-width="70" data-background="#ff5722">javaScript (70%)</div>
+                <div id="skill3" class="skills" data-width="60" data-background="#213917">database (60%)</div>
+                <div id="skill4" class="skills" data-width="60" data-background="#f44336">java (60%)</div>
+                <div id="skill5" class="skills" data-width="10" data-background="#3b5998">react (10%)</div>
+            </div>
+        </div>
+        
     </div>
-    <div class="row">
+    
 
-    {% for post in site.posts %}
-
-        {% if post.featured == true %}
-
-            {% include featuredbox.html %}
-
-        {% endif %}
-
-    {% endfor %}
-
-    </div>
-</section>
-
-{% endif %}
-
-<!-- Posts Index
-================================================== -->
-<section class="recent-posts">
-
-    <div class="section-title">
-
-        <h2><span>All Stories</span></h2>
-
-    </div>
-
-    <div class="row listrecent">
-
-        {% for post in paginator.posts %}
-
-        {% include postbox.html %}
-
-        {% endfor %}
-
-    </div>
-
-</section>
-
-<!-- Pagination
-================================================== -->
-<div class="bottompagination">
-<div class="pointerup"><i class="fa fa-caret-up"></i></div>
-<span class="navigation" role="navigation">
-    {% include pagination.html %}
-</span>
-</div>
-
+<script src="js/jquery.min.js"></script>
+<script src="js/skill.js"></script>
+<script src="js/test.js"></script>    
+</body>
+</html>
